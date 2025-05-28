@@ -1,4 +1,4 @@
-## Remember
+## Remember 
 
 You are given a PDF to read through.
 
@@ -10,5 +10,5 @@ You are given a PDF to read through.
 
 **Members of APT 509:**
 
-![image](./remember_hackosint.png)
+![image](./assets/remember_hackosint.png)
 
