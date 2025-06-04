@@ -19,6 +19,6 @@ Solves: 54
 
 We used his TripAdivsor username to find his account on [BlueSky](https://bsky.app/profile/did:plc:6ewufg2fztglgresvyyx56m7). Using the article we found at the start we determine that some members of APT 509 were arrested on the 25th of June 2024. 
 
-Analyzing his posts on BlueSky, we find a [post](https://bsky.app/profile/did:plc:6ewufg2fztglgresvyyx56m7) about his stay in tokyo with an image of a ticket. The ticket reads "Chanko & Wanko", which we find with a quick google search.
+Analyzing his posts on BlueSky, we find a [post](https://bsky.app/profile/did:plc:6ewufg2fztglgresvyyx56m7) about his stay in tokyo with an image of a ticket. The ticket reads "Chanko & Wanko" in Japanese, which we find with a quick google search.
 
 Flag: `35.71444252126963, 139.79272861896155`

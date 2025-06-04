@@ -14,6 +14,6 @@ Solves: 77
 
 <br>
 
-Checking the tripadvisor reviews of the restaurant, we can see a review from a user named `Henry B` with the username `78478HBethune`. He posted the date of visit "12 May 2024" which corresponds with the chats.
+Checking the tripadvisor reviews of the restaurant, we can see a review from a user named `Henry B` with the username `78478HBethune`. He posted the date of his visit "12 May 2024" which corresponds with the chats.
 
 Flag: `Henry Bethune`

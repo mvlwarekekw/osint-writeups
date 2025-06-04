@@ -19,4 +19,4 @@ Using one of the pinned stories we can see a picture of an iPhone she just bough
 There's also a GMail account in the bio which we can look up with Epieos, finding their [Google calendar](https://calendar.google.com/calendar/u/0/embed?src=lea.gaudreau.pro@gmail.com) is public. 
 Scrolling back quite a bit to the 19th of April there's an event called "Achat de mon nouveau bébé" during a weekend in Lyon.
 
-Flag: `Centre Commerical La Part-Dieu 17 Rue du Docteur Bouchut 69003 Lyon Frankreich`
+Flag: `Centre Commerical La Part-Dieu 17 Rue du Docteur Bouchut 69003 Lyon`
