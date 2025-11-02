@@ -43,9 +43,9 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
 1. Get a frame from the video that includes a decent amount of context
 ![001_horror_clowns.png](001_horror_clowns.png)
 2. Use Google RIS on the match and click on the station, it should auto select
-![002_horror_clowns_2.png](002_horror_clowns_2.png)
+![002_horror_clowns.png](002_horror_clowns.png)
 3. Going to the website of the first/second match you'll find the image, which leads you to the station
-![003_horror_clowns_3.png.png](003_horror_clowns_3.png)
+![003_horror_clowns.png](003_horror_clowns.png)
 
 
 </details>
@@ -70,11 +70,11 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
 
 1. Zooming closer in to the wallet, you'll see a coupe lines of gibberish. In Switzerland we call it bureaucracy though, anyways
 
-![005_my_identity_2.png](005_my_identity_2.png)
+![005_my_identity.png](005_my_identity.png)
 
 2. Doing some research, this code seems to follow the MRZ TD1 standard, more specifically the second line
 
-![006_my_identity_2.png](006_my_identity_2.png)
+![006_my_identity.png](006_my_identity.png)
 
 3. Simply extract the first 6 digits and you'll have the birthday
 
@@ -108,3 +108,59 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
 Flag: `hpCTF{no}` <br>
 Reason: Different Gender
 </details>
+
+
+## Ghost Ship
+
+> A Ghost Ship was found ashore. <br>
+> Can you find the IMO number of the ship. <br><br>
+> Flag Format: hpCTF{IMO_nr} <br><br>
+> Challenge image:
+
+![007_ghost_ship.png](007_ghost_ship.png)
+
+<details>
+    <summary>Steps</summary>
+
+1. Usually these types of locations are pretty easily findable with Google RIS, so that's what I did
+
+![007_ghost_ship.png](007_ghost_ship.png)
+
+2. Google found multiple exact matches for the image which all relate to the ship "MV Alta"
+
+![008_ghost_ship.png](008_ghost_ship.png)
+
+3. Using a quick google dork `"MV Alta" + "IMO"` you'll find the IMO pretty quickly
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{7432305}`
+</details>
+
+
+## Ghost Ship - 2
+
+> Can you also find out where the ship currently is ?
+
+Of course I can.
+
+<details>
+    <summary>Steps</summary>
+
+1. I proceeded to google dork the ships name with location ("MV Alta" + "location") again and got the following match: https://www.theultimateroadtripresource.com/location/discover-new-adventures/ghost-ship-mv-alta
+2. The website showed a location near Ballyandreen Beach (51.81141248317834, -8.056514248978711), which I confirmed using satellite imagery
+
+![009_ghost_ship.png](009_ghost_ship.png)
+
+(Source: Google Maps)
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `51.81141248317834, -8.056514248978711` (on the map)
+</details>
+
