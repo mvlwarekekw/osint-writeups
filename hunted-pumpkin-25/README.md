@@ -1,17 +1,21 @@
 <div style="display:flex; flex-direction: column; align-items: center;">
 <h1> Haunted Pumpkin CTF '25 </h1>
 <h3> Fun CTF organized by OSINT Switzerland </h3>
+<h4>DISCLAIMER: All of these challenges were for educational purposes only and should not be used for malicious purposes.</h4>
 
 ![pumpkin.png](pumpkin.png)
 (they're friendly)
 
 </div>
+<br>
 
-### Dictionary
+## Dictionary
 
 RIS - Reverse Image Search <br>
 Steg - steganography <br>
+(Google) dork - advanced search query <br>
 
+<br>
 
 ## Introduction
 
@@ -28,6 +32,7 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
 
 </details>
 
+<br>
 
 ## Horror Clowns
 
@@ -55,6 +60,8 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
 
     Flag: `hpCTF{Perugia Silvestrini}`
 </details>
+
+<br>
 
 ## My identity
 > We recorded a grave raider last night. <br>
@@ -86,13 +93,14 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
     Flag: `hkCTF{19640812}`
 </details>
 
+<br>
 
 ## My identity - 2
 
 > Great, the birthday is a good start! <br>
 > But tell me, belongs this passport really to the man in the image? <br>
 > Answer with yes or no. <br><br>
-> Flag Format: hpCTF{<yes|no>}
+> Flag Format: `hpCTF{<yes|no>}`
 
 <details>
     <summary>Steps</summary>
@@ -109,6 +117,7 @@ Flag: `hpCTF{no}` <br>
 Reason: Different Gender
 </details>
 
+<br>
 
 ## Ghost Ship
 
@@ -140,7 +149,6 @@ Reason: Different Gender
 Flag: `hpCTF{7432305}`
 </details>
 
-
 ## Ghost Ship - 2
 
 > Can you also find out where the ship currently is ?
@@ -151,7 +159,7 @@ Of course I can.
     <summary>Steps</summary>
 
 1. I proceeded to google dork the ships name with location ("MV Alta" + "location") again and got the following match: https://www.theultimateroadtripresource.com/location/discover-new-adventures/ghost-ship-mv-alta
-2. The website showed a location near Ballyandreen Beach (51.81141248317834, -8.056514248978711), which I confirmed using satellite imagery
+2. The website showed a location near Ballyandreen Beach (51.81141248317834, -8.056514248978711), which we confirmed using satellite imagery
 
 ![009_ghost_ship.png](009_ghost_ship.png)
 
@@ -164,3 +172,202 @@ Of course I can.
 Flag: `51.81141248317834, -8.056514248978711` (on the map)
 </details>
 
+<br>
+
+## Dude where was this car
+
+> You leave the tunnel where the car enters at the end of the clip: https://www.youtube.com/watch?v=j6-yVoJTCo8 <br>
+> There is a little public rest room with a green roof at the parking lot on the left side (Year 2021). <br>
+> A few meters further (also on the left side) there is a sign which was build between 2008 and 2009. <br><br>
+> What does the sign say? <br><br>
+> Flag Format: hpCTF{***** ***** **}
+
+
+<details>
+    <summary>Steps</summary>
+
+1. I started off with extracting a frame from the video, that I thought contained the most information and google RISed it. The Facebook post had a much clearer image without any filter, so I decided to reuse that image to RIS again.
+
+![010_dude_where_was_this_car.png](010_dude_where_was_this_car.png)
+![011_dude_where_was_this_car.png](011_dude_where_was_this_car.png)
+
+2. Looking at the second RIS, you'll see a lot of sources mentioning Zion national park (Utah, US). As the question mentions a restroom, its safe to assume that its close to the tunnel entrance. 
+   I checked both tunnel exits for a parking lot and a house with a green roof and eventually found [this restroom house](https://maps.app.goo.gl/8XbZzcn7VkTiNHAv5).
+3. Looking at the streetview from 2009, we were able to find the following sign at the tunnel entrance: 
+
+![012_dude_where_was_this_car.png](012_dude_where_was_this_car.png)
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{Speed Limit 25}`
+</details>
+
+<br>
+
+## I Like Trains
+
+> What classification code is written on the side of that train? <br><br>
+> Flag Format: hpCTF{* *** * ****} <br><br>
+> Challenge image:
+
+![013_i_like_trains.png.png](013_i_like_trains.png)
+
+<details>
+    <summary>Steps</summary>
+
+1. The image doesn't really have any context, so I decided to google RIS yet again
+
+![014_i_like_trains.png](014_i_like_trains.png)
+
+2. The first match looks the exact same and seems to be a frame of [this video](https://www.youtube.com/watch?v=kqp9uFIQtMM).
+3. As the video contains no identifiers and the description doesn't mention the classification code, we'll have to google dork the name in the description with the site trains.com (`"Markus Zaugg" + "snowplow" site:trains.com`).
+4. You'll have to check for yourself, but for me the first match linked to an article with a snowplow. The article mentions the name "Xrot 9213", which with a quick google search revealed the full classification code.
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{X Rot d 9213}`
+
+</details>
+
+<br>
+
+## Trash Belongs Into The Bin
+
+> Look what someone threw into the bin: 6W2XQjJP <br>
+> This does not look like a youtube extension to me ... But wait, there is something written next to it: <br>
+> “He crafts his games with fear and might, <br>
+> A puzzling man who haunts the night.  <br>
+> The hash will lead, now take your chance—  <br>
+> The file you find with a second glance ” <br> <br>
+> Which wicked and malicious file holds this individuums name?  <br> <br>
+> Flag Format: `hpCTF{******.***}` <br>
+> Flag Example: `hpCTF{sealss.exe}`
+
+<details>
+    <summary>Steps</summary>
+
+1. The challenge title and description themselves already have quite a few hints. More specifically "the bin" and "the file". The first thing I thought of checking out was pastebin, as it pretty much checks both boxes.
+2. There was a file with that path indeed: https://pastebin.com/6W2XQjJP. It contained a hash, presumably a file hash.
+3. Whenever you encounter a file hash, you should check out VirusTotal and look it up there. You can see file names in the details tab, so I decided to check that and there it was!
+
+![015_trash_belongs_into_the_bin.png](015_trash_belongs_into_the_bin.png)
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{Jigsaw.exe}`
+</details>
+
+<br>
+
+## The Halloween Party
+
+> There is Flag is in this room. I guess you know what to do ... <br><br>
+> Flag format: `hpCTF{<flag>}` <br><br>
+> Challenge Image:
+
+![016_the_halloween_party.png](016_the_halloween_party.png)
+
+<details>
+    <summary>Steps</summary>
+
+1. The objective for this one is quite clear: Scan the QR code. Easier said than done as its slightly obstructed at the top right. 
+2. We used QRazybox to reconstruct it, although its arguably easier just drawing the missing lines
+ 
+![017_the_halloween_party.png](017_the_halloween_party.png)
+
+3. Scanning the QR code gives you the flag
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{051N7_5W17Z3RL4ND_H4LL0W33N_CTF}`
+</details>
+
+<br>
+
+## Fake News
+
+> Fake news like these spread more wildely than ever. <br>
+> Can you find out who was actually arrested here? <br><br>
+> Flag Format: `hpCTF{**** *** ***-*****}` <br><br>
+> Challenge image: <br>
+
+![018_fake_news.png](018_fake_news.png)
+
+<details>
+    <summary>Steps</summary>
+
+1. Cutting out a part of an image usually works pretty well most of the time, which worked for this one. The image on the right links to an article which includes part of the name: `Ryan Law`
+![019_fake_news.png](019_fake_news.png)
+2. Simply searching for him on google shows the full name
+![020_fake_news.png](020_fake_news.png)
+
+</details>
+ 
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{Ryan Law Wait-kwong}`
+</details>
+
+<br>
+
+## Fake News - 2
+
+> Can you also find which age Ryan was when he was arrested? <br>
+> Flag Format: hpCTF{**}
+
+<details>
+    <summary>Steps</summary>
+
+1. Carefully craft a google dork with his full name and the string "age" (`"ryan law wai-kwong" + "age"`)
+2. Click the [first link](https://www.hongkongwatch.org/political-prisoner/2024/10/30/ryan-law-wai-kwong) which shows the age when he was arrested. You could also try to figure out his birthday and calculate the difference, but that's arguably more complicated.
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{46}`
+</details>
+
+<br>
+
+## Follow The Money
+
+> a11ab03eeb08f4914bc6d7421dca96ebd6c96ff1c9b3e028d3a268cf44c21aff <br><br>
+> Flag Format: `hpCTF{<programming_language>}` <br><br>
+> Challenge image:
+
+![021_follow_the_money.png](021_follow_the_money.png)
+
+<details>
+    <summary>Steps</summary>
+    
+1. The provided image has some japanese text talking about a donation to a software development studio and us having to figure out what programming language they use the least, so lets do that.
+2. That looks like a bitcoin TX hash to me, so I'll start looking on btcscan.org. Indeed, there was a TX with said hash, sent to the address `18kj9UWRZC9YxZMoN2iz2A8Xmwqxxdyp8X`, presumably the address of the software development studio referred to in the challenge description. 
+
+![022_follow_the_money.png](022_follow_the_money.png)
+
+3. Doing a quick google search with that BTC address, you'll find their website: https://flacon.github.io/donate/.
+4. Heading to their GitHub, it'll show you the percentages of used programming languages on the right side, which in this case was `Roff`.
+
+![023_follow_the_money.png](023_follow_the_money.png)
+
+(disclaimer: technically speaking this is a markup language rather than a programming language)
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{Roff}`
+</details>
