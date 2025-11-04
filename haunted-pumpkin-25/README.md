@@ -371,3 +371,160 @@ Flag: `hpCTF{46}`
 
 Flag: `hpCTF{Roff}`
 </details>
+
+<br>
+
+## Peekabo
+
+> The barcode for this parcel was placed on a really weird place... <br>
+> Where do you have to send this parcel so it finds its original destination? <br><br>
+> Flag Format: `hpCTF{<ZIP>_<City>_<Street>_<Number>}` <br><br>
+> [Challenge File](./assets/024_peekabo.png)
+
+<details>
+    <summary>Steps</summary>
+
+1. As the original image didn't include any barcodes and there was no metadata attached, the next thing to check was if there's any embedded files in there (which in this case there definitely was). This can be done by using a tool like Binwalk. 
+2. There's quite a few online options, we opted to use the CLI tool though. After extracting the second image, we get a `.bin` file as an export, which can simply be changed to the `.png` filetype to view.
+
+![025_peekabo.png](./assets/025_peekabo.png)
+
+3. We have the barcode now, so the only thing left is to scan it using an online tool. (Output: `CHE-274.572.141`)
+4. Due to previous experience with Zefix I recognized this number, but you could simply run a quick google search, and you'd get the same result as I did. (https://zefix.ch/en/search/entity/list/firm/1159018)
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{6003_Luzern_Sagenmattstrasse_7}`
+</details>
+
+<br>
+
+## Ghost in the inbox
+
+> Oh-Oh, it seems like someone tries to phish people in our name 🤨😮 <br>
+> Can you help us figure out who really sent this email? <br><br>
+> Flag Format: `hpCTF{************************}` <br><br>
+> [Challenge File](./assets/026_ghost_in_the_inbox.eml)
+
+<details>
+    <summary>Steps</summary>
+
+1. If you're not familiar with what an EML file is, it's basically the raw file format for the emails that you read every day, which your web app (e.g. Gmail) renders in a more readable way.
+2. You can read these files using any EML reader online (e.g. https://www.emlreader.com/), all of them should produce the same result.
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{ctf@cultoftherabbit.team}`
+</details>
+
+<br>
+
+## Ghost in the inbox - 2
+
+> Nice job finding the real sender of the email! <br>
+> Now we need more information about the domain and where it comes from. Do you know where to look? <br>
+> Maybe you have to dig deeper ... <br>
+> the flag reveals itself once you are on the right spot (in other words, its obvious when you find it) <br><br>
+> Flag Format: `hpCTF{<flag>}`
+
+<details>
+    <summary>Steps</summary>
+
+1. Usually challenges involving domains hide things in their DNS records, so that's the first thing we checked. You can check DNS records using any DNS lookup tool that exists, just make sure it supports TXT records.
+![026_ghost_in_the_inbox.png](./assets/026_ghost_in_the_inbox.png)
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{TH1S_1S_Y0UR_DNS_F14G}`
+</details>
+
+<br>
+
+## Friday 13
+
+> What a legend in the world of horror movies. <br>
+> Are you able to find his phone number? <br> <br>
+> Flag Format: `hpCTF{+* ***-***-****}`
+
+<details>
+    <summary>Steps</summary>
+
+1. To figure out who that person is, simply RIS the provided challenge image.
+2. Once you got the name (Ari Lehman) you can use a data aggregator, such as 
+</details>
+
+<br>
+
+I won't add the flag for this one, as I dont like including PII in my writeups.
+
+<br>
+
+## Friday 14
+
+> Can you also find his email (related to his role)? <br><br>
+> Flag Format: `hpCTF{<email>}`
+
+
+
+<br>
+
+## OH's secret place
+
+> One of the main suspects in the haunted pumpkin summing posted an image on social media. <br>
+> Can you find at what time the picture was taken? <br><br>
+> Flag Format: hpCTF{hh:mm} <br><br>
+> Challenge image:
+
+![027_ohs_secret_place.png](./assets/027_ohs_secret_place.png)
+
+<details>
+    <summary>Steps</summary>
+
+1. As every other team probably we did, we first tried looking for the instagram post. After no success within the first 20 minutes, we decided that using the date on the right together with the angle of the sun was the best option.
+2. We used https://suncalc.org, but you can use whichever tool you prefer. The middle of the sun is slightly to the left of the building straight in front of camera, which we can line up with suncalc.
+
+![028_ohs_secret_place.png](./assets/028_ohs_secret_place.png)
+
+3. The approximated time we got is 20:44, as there was a small buffer included by the CTF staff that was well within the range.
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{20:44}`
+</details>
+
+<br>
+
+## Three word nightmare
+
+> Where still today pure evil is being kept and controlled for years, the nightmare started ages ago.<br>
+> When did the most famous resident of this place started spreading its nightmares? And who was the first victim?<br><br>
+> Flag Format: `hpCTF{YYYY_<name>}` <br><br>
+> [Challenge File](./assets/029_three_word_nightmare.mp3)
+
+Transcription: `Direction Unwraps Blacksmith.`
+
+<details>
+    <summary>Steps</summary>
+
+1. What3words is a pretty popular way of encoding exact locations in OSINT. You can represent any location on earth with 3 words, even your front porch. That means that our audio also represents a location somewhere.
+
+![030_three_word_nightmare.png](./assets/030_three_word_nightmare.png)
+
+2. In this case, it's the location of the `The Warrens’ Occult Museum`. After checking multiple sources, we eventually confirmed that the "Annabelle Doll" is the most famous resident. "Amitysville" was first according to some sources, the murder in that case was never a  resident however, which means Annabelle is the only resident that comes in question.
+3. Reading through the case file at https://tonyspera.com/annabelle/, we eventually figured out that Donna was the first victim (yes, psychological victim counts).
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+Flag: `hpCTF{1970_Donna}`
+</details>
