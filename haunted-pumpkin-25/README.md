@@ -46,11 +46,11 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
     <summary>Steps</summary>
 
 1. Get a frame from the video that includes a decent amount of context
-![001_horror_clowns.png](001_horror_clowns.png)
+![001_horror_clowns.png](./assets/001_horror_clowns.png)
 2. Use Google RIS on the match and click on the station, it should auto select
-![002_horror_clowns.png](002_horror_clowns.png)
+![002_horror_clowns.png](./assets/002_horror_clowns.png)
 3. Going to the website of the first/second match you'll find the image, which leads you to the station
-![003_horror_clowns.png](003_horror_clowns.png)
+![003_horror_clowns.png](./assets/003_horror_clowns.png)
 
 
 </details>
@@ -70,18 +70,18 @@ Flag: `hpCTF{Th4nk5_4_F0ll0w1ng_Th3_Ru135}`
 > Flag Format: `hpCTF{YYYYMMDD}` <br>
 > Flag Example: `hpCTF{19900615}` <br><br>
 > Challenge image:
-![004_my_identity.png](004_my_identity.png)
+![004_my_identity.png](./assets/004_my_identity.png)
 
 <details>
     <summary>Steps</summary>
 
 1. Zooming closer in to the wallet, you'll see a coupe lines of gibberish. In Switzerland we call it bureaucracy though, anyways
 
-![005_my_identity.png](005_my_identity.png)
+![005_my_identity.png](./assets/005_my_identity.png)
 
 2. Doing some research, this code seems to follow the MRZ TD1 standard, more specifically the second line
 
-![006_my_identity.png](006_my_identity.png)
+![006_my_identity.png](./assets/006_my_identity.png)
 
 3. Simply extract the first 6 digits and you'll have the birthday
 
@@ -126,18 +126,18 @@ Reason: Different Gender
 > Flag Format: hpCTF{IMO_nr} <br><br>
 > Challenge image:
 
-![007_ghost_ship.png](007_ghost_ship.png)
+![007_ghost_ship.png](./assets/007_ghost_ship.png)
 
 <details>
     <summary>Steps</summary>
 
 1. Usually these types of locations are pretty easily findable with Google RIS, so that's what I did
 
-![007_ghost_ship.png](007_ghost_ship.png)
+![007_ghost_ship.png](./assets/007_ghost_ship.png)
 
 2. Google found multiple exact matches for the image which all relate to the ship "MV Alta"
 
-![008_ghost_ship.png](008_ghost_ship.png)
+![008_ghost_ship.png](./assets/008_ghost_ship.png)
 
 3. Using a quick google dork `"MV Alta" + "IMO"` you'll find the IMO pretty quickly
 
@@ -161,7 +161,7 @@ Of course I can.
 1. I proceeded to google dork the ships name with location ("MV Alta" + "location") again and got the following match: https://www.theultimateroadtripresource.com/location/discover-new-adventures/ghost-ship-mv-alta
 2. The website showed a location near Ballyandreen Beach (51.81141248317834, -8.056514248978711), which we confirmed using satellite imagery
 
-![009_ghost_ship.png](009_ghost_ship.png)
+![009_ghost_ship.png](./assets/009_ghost_ship.png)
 
 (Source: Google Maps)
 </details>
@@ -188,14 +188,14 @@ Flag: `51.81141248317834, -8.056514248978711` (on the map)
 
 1. I started off with extracting a frame from the video, that I thought contained the most information and google RISed it. The Facebook post had a much clearer image without any filter, so I decided to reuse that image to RIS again.
 
-![010_dude_where_was_this_car.png](010_dude_where_was_this_car.png)
-![011_dude_where_was_this_car.png](011_dude_where_was_this_car.png)
+![010_dude_where_was_this_car.png](./assets/010_dude_where_was_this_car.png)
+![011_dude_where_was_this_car.png](./assets/011_dude_where_was_this_car.png)
 
 2. Looking at the second RIS, you'll see a lot of sources mentioning Zion national park (Utah, US). As the question mentions a restroom, its safe to assume that its close to the tunnel entrance. 
    I checked both tunnel exits for a parking lot and a house with a green roof and eventually found [this restroom house](https://maps.app.goo.gl/8XbZzcn7VkTiNHAv5).
 3. Looking at the streetview from 2009, we were able to find the following sign at the tunnel entrance: 
 
-![012_dude_where_was_this_car.png](012_dude_where_was_this_car.png)
+![012_dude_where_was_this_car.png](./assets/012_dude_where_was_this_car.png)
 
 </details>
 
@@ -213,14 +213,14 @@ Flag: `hpCTF{Speed Limit 25}`
 > Flag Format: hpCTF{* *** * ****} <br><br>
 > Challenge image:
 
-![013_i_like_trains.png.png](013_i_like_trains.png)
+![013_i_like_trains.png.png](./assets/013_i_like_trains.png)
 
 <details>
     <summary>Steps</summary>
 
 1. The image doesn't really have any context, so I decided to google RIS yet again
 
-![014_i_like_trains.png](014_i_like_trains.png)
+![014_i_like_trains.png](./assets/014_i_like_trains.png)
 
 2. The first match looks the exact same and seems to be a frame of [this video](https://www.youtube.com/watch?v=kqp9uFIQtMM).
 3. As the video contains no identifiers and the description doesn't mention the classification code, we'll have to google dork the name in the description with the site trains.com (`"Markus Zaugg" + "snowplow" site:trains.com`).
@@ -256,7 +256,7 @@ Flag: `hpCTF{X Rot d 9213}`
 2. There was a file with that path indeed: https://pastebin.com/6W2XQjJP. It contained a hash, presumably a file hash.
 3. Whenever you encounter a file hash, you should check out VirusTotal and look it up there. You can see file names in the details tab, so I decided to check that and there it was!
 
-![015_trash_belongs_into_the_bin.png](015_trash_belongs_into_the_bin.png)
+![015_trash_belongs_into_the_bin.png](./assets/015_trash_belongs_into_the_bin.png)
 </details>
 
 <details>
@@ -273,7 +273,7 @@ Flag: `hpCTF{Jigsaw.exe}`
 > Flag format: `hpCTF{<flag>}` <br><br>
 > Challenge Image:
 
-![016_the_halloween_party.png](016_the_halloween_party.png)
+![016_the_halloween_party.png](./assets/016_the_halloween_party.png)
 
 <details>
     <summary>Steps</summary>
@@ -281,7 +281,7 @@ Flag: `hpCTF{Jigsaw.exe}`
 1. The objective for this one is quite clear: Scan the QR code. Easier said than done as its slightly obstructed at the top right. 
 2. We used QRazybox to reconstruct it, although its arguably easier just drawing the missing lines
  
-![017_the_halloween_party.png](017_the_halloween_party.png)
+![017_the_halloween_party.png](./assets/017_the_halloween_party.png)
 
 3. Scanning the QR code gives you the flag
 
@@ -302,15 +302,15 @@ Flag: `hpCTF{051N7_5W17Z3RL4ND_H4LL0W33N_CTF}`
 > Flag Format: `hpCTF{**** *** ***-*****}` <br><br>
 > Challenge image: <br>
 
-![018_fake_news.png](018_fake_news.png)
+![018_fake_news.png](./assets/018_fake_news.png)
 
 <details>
     <summary>Steps</summary>
 
 1. Cutting out a part of an image usually works pretty well most of the time, which worked for this one. The image on the right links to an article which includes part of the name: `Ryan Law`
-![019_fake_news.png](019_fake_news.png)
+![019_fake_news.png](./assets/019_fake_news.png)
 2. Simply searching for him on google shows the full name
-![020_fake_news.png](020_fake_news.png)
+![020_fake_news.png](./assets/020_fake_news.png)
 
 </details>
  
@@ -348,7 +348,7 @@ Flag: `hpCTF{46}`
 > Flag Format: `hpCTF{<programming_language>}` <br><br>
 > Challenge image:
 
-![021_follow_the_money.png](021_follow_the_money.png)
+![021_follow_the_money.png](./assets/021_follow_the_money.png)
 
 <details>
     <summary>Steps</summary>
@@ -356,12 +356,12 @@ Flag: `hpCTF{46}`
 1. The provided image has some japanese text talking about a donation to a software development studio and us having to figure out what programming language they use the least, so lets do that.
 2. That looks like a bitcoin TX hash to me, so I'll start looking on btcscan.org. Indeed, there was a TX with said hash, sent to the address `18kj9UWRZC9YxZMoN2iz2A8Xmwqxxdyp8X`, presumably the address of the software development studio referred to in the challenge description. 
 
-![022_follow_the_money.png](022_follow_the_money.png)
+![022_follow_the_money.png](./assets/022_follow_the_money.png)
 
 3. Doing a quick google search with that BTC address, you'll find their website: https://flacon.github.io/donate/.
 4. Heading to their GitHub, it'll show you the percentages of used programming languages on the right side, which in this case was `Roff`.
 
-![023_follow_the_money.png](023_follow_the_money.png)
+![023_follow_the_money.png](./assets/023_follow_the_money.png)
 
 (disclaimer: technically speaking this is a markup language rather than a programming language)
 </details>
