@@ -1,7 +1,7 @@
 <div style="display:flex; flex-direction: column; align-items: center;">
 <h1> Haunted Pumpkin CTF '25 </h1>
 <h3> Fun CTF organized by OSINT Switzerland </h3>
-<h4>DISCLAIMER: All of these challenges were for educational purposes only and should not be used for malicious purposes.</h4>
+<h4>DISCLAIMER: All of these challenges were made for educational purposes only and should not be used for malicious purposes. I do not own any of the challenge assets below, all credits go to OSINT switzerland.</h4>
 
 ![pumpkin.png](pumpkin.png)
 (they're friendly)
