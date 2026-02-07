@@ -8,8 +8,9 @@ PII was redacted for privacy and legal reasons.
 
 # Table of contents
 
-[Romanian PMC](#romanian-pmc)
-[One Shots](#one-shots)
+### 1. [Romanian PMC](#romanian-pmc)
+### 2. [One Shots](#one-shots)
+### 3. [Gamer Gambling](#one-shots)
 
 # Romanian PMC
 
@@ -231,4 +232,10 @@ Simply extract the creative ID from the URL for the third ad.
 
     Flag: `CR11259045643051597825`
 </details>
+
+<br>
+
+# Gamer Gambling
+
+### Part 1 
 
