@@ -97,7 +97,7 @@ Coming back to the page we found in part 2 we can head to the "People" tab, whic
 
 <details>
     <summary>Flag</summary>
-    Actual Flag redacted due to PII.
+    Actual flag redacted due to PII.
 
     Flag: `******* ********` (7 chars [_] 8 chars)
 </details>
@@ -123,7 +123,7 @@ Scrolling down to the officers we can see that there's only one female officer, 
 
 <details>
     <summary>Flag</summary>
-    Actual Flag redacted for PII.
+    Actual flag redacted for PII.
 
     Flag: `***** *****` (5 chars [_] 5 chars)
 </details>
@@ -147,7 +147,7 @@ This can only be verified to the extent where the approximate age and the countr
 
 <details>
     <summary>Flag</summary>
-    Actual Flag redacted for PII
+    Actual flag redacted for PII
 
     Flag: `www.facebook.com/SURNAME.PRENAME`
 </details>
@@ -238,4 +238,150 @@ Simply extract the creative ID from the URL for the third ad.
 # Gamer Gambling
 
 ### Part 1 
+
+> daddyskins.com and casino-oasis.net are online casinos.
+> What is the name of the person linked to the both companies behind these casinos?
+
+
+<details>
+    <summary>Approach</summary>
+
+We first have to figure out which companies are behind these websites. Daddyskins publicly lists MIXABIT LTD as the owner on their website footer. 
+Casino Oasis isn't accessible at the moment, but google has indexed it before, so we can try to dork it. We used this dork to find the name:
+
+``site:casino-oasis.net + "LTD"``
+
+which yielded a few results, but only the company mentioned on their about us page is the actual owner. The other results are all companies that created the casino games.
+
+Now we just have to compare the registered officers for TORIBIT LTD and MIXABIT LTD, which shows that they have the same secretary in common.
+
+![gamer_gambling_01.png](./assets/gamer_gambling_01.png)
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+    Actual flag redacted for PII.
+
+    Flag: `******** ***********` (8 chars [_] 11 chars) 
+</details>
+
+
+### Part 2
+
+> The same person is the director of a company registered on 16/03/2023. What is the name of the company?
+
+<details>
+    <summary>Approach</summary>
+
+Using the name from the last challenge we can look it up on a website such as b2bhint.com, which shows approximately 43 results. Going through all of them there's only one company that matches 16/03/2023, which is DELTAPRIME LIMITED.
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+    Flag: `DELTAPRIME LIMITED`
+</details>
+
+
+### Part 3
+
+> What is the first trademark filled by DELTAPRIME LIMITED?
+> Answer with the "Trade mark number" or "Filing number".
+
+<details>
+    <summary>Approach</summary>
+
+We know the companies name and location, which means we can look it up in a trademark DB (e.g. the EU's official DB). Searching for the applicant "DELTAPRIME LIMITED" shows 6 results, with the first one being filed on the 19th of December 2023 with filing number 018966079.
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+    Flag: `018966079`
+</details>
+
+
+### Part 4
+> Deltaprime limited is involved with a large number of casinos. What other company is usually involved with these casinos?
+
+<details>
+    <summary>Approach</summary>
+
+As company databases didn't return any useful results, we pivoted to google dorking the exact name. Multiple websites mentioned DELTAPRIME LIMITED being a paying agent of Fortuna Games N.V.
+
+![gamer_gambling_02.png](./assets/gamer_gambling_02.png)
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+    Flag: `Fortuna Games N.V.`
+</details>
+
+
+### Part 5
+
+> What is the name of the statutory director of Fortuna Games N.V.?
+
+<details>
+    <summary>Approach</summary>
+
+As we still don't really have a lot of info on Fortuna Games N.V. that was our first goal. Dorking the name together with the string "Company registration" yielded a few results, one being a PDF of the Online Gaming License Registry of Curaçao published by the Curaçao GCB.
+
+This means we can now look it up on the Curaçao company registry (https://www2.curacao-chamber.com/). The registry only shows one official with the role of "Statutory Director", which is another Curaçao based company.
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+    Flag: `(SMES) Solutions for Management and Employment Support N.V.`
+</details>
+
+
+### Part 6
+
+> What is the name of the managing director of (SMES) Solutions for Management and Employment Support N.V. ?
+
+
+<details>
+    <summary>Approach</summary>
+
+Same approach as part 5, look up the name on the Curaçao company registry and look for the managing director.
+</details>
+
+<details>
+    <summary>Flag</summary>
+    Actual flag redacted for PII
+
+    Flag: `****** ******** *******` (6 chars [_] 8 chars [_] 7 chars)
+</details>
+
+
+### Part 7
+
+> This person, REDACTED_3, was involved in at least 2 companies with the same Kazakhstani businessman. What is the name of this business man?
+> Answer with the name of this person, using the latin alphabet.
+
+<details>
+    <summary>Approach</summary>
+
+First of all, we'll have to find the 2 companies REDACTED_3 is associated with. Google dorking the exact name returns a DB entry on Offshore Leaks (same name, linked to Curaçao, same address), which shows her involvement in 2 companies (Incomeborts Ltd. and Norgulf Holding Ltd.).
+Offshore Leaks has a visual graph which shows relations between companies & people, which is extremely useful in this case. 3 people share relations between both of the company, REDACTED_3, a person with a kazakhstani name and a third, presumably american person.
+
+![gamer_gambling_03.png](./assets/gamer_gambling_03.png)
+
+
+Knowing that there's only one individual with kazakhstani origin, we can safely assume this is the person we're looking for.
+
+</details>
+
+<details>
+    <summary>Flag</summary>
+
+    Flag: `********** **********` (9 chars [_] 10 chars)
+</details>
+
+
 
